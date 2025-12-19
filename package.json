@@ -1,0 +1,65 @@
+{
+  "name": "webmoney-js",
+  "version": "1.0.0",
+  "description": "JavaScript/TypeScript library for WebMoney payment system integration",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "keyextractor": "./bin/keyextractor.js"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "bin",
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "format": "prettier --write \"**/*.{js,ts}\""
+  },
+  "keywords": [
+    "webmoney",
+    "payment",
+    "payment-gateway",
+    "e-commerce",
+    "payments",
+    "webmoney-api"
+  ],
+  "author": "Digimoney",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SIADigimoney/webmoney-js"
+  },
+  "bugs": {
+    "url": "https://github.com/SIADigimoney/webmoney-js/issues"
+  },
+  "homepage": "https://github.com/SIADigimoney/webmoney-js",
+  "devDependencies": {
+    "@types/iconv-lite": "^0.0.1",
+    "@types/jest": "^30.0.0",
+    "jest": "^30.2.0",
+    "prettier": "^3.7.4",
+    "ts-jest": "^29.4.5",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.3.1",
+    "iconv-lite": "^0.7.0"
+  }
+}

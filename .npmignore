@@ -1,0 +1,42 @@
+# Source files (we ship the compiled dist/ instead)
+src/
+*.ts
+!*.d.ts
+
+# Tests
+**/*.test.ts
+**/*.test.js
+**/*.spec.ts
+**/*.spec.js
+coverage/
+.nyc_output/
+
+# Config files
+tsconfig*.json
+.eslintrc*
+.prettierrc*
+.editorconfig
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Development
+node_modules/
+*.log
+.env
+.env.*
+*.tmp
+.DS_Store
